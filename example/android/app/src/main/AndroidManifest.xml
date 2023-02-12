@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_deep_links_example">
+    package="com.huhx.deeplinks">
    <application
         android:label="flutter_deep_links_example"
         android:name="${applicationName}"
