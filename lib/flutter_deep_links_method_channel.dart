@@ -9,9 +9,15 @@ class MethodChannelFlutterDeepLinks extends FlutterDeepLinksPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('flutter_deep_links');
 
+  static const MethodChannel _mChannel = MethodChannel('deep_links/messages');
+  static const EventChannel _eChannel = EventChannel('deep_links/events');
+
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
-  }
+  Future<String?> getInitialLink() =>
+      _mChannel.invokeMethod<String?>('getInitialLink');
+
+  @override
+  final Stream<String?> linkStream = _eChannel
+      .receiveBroadcastStream()
+      .map<String?>((dynamic link) => link as String?);
 }
