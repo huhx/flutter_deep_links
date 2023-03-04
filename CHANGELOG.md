@@ -1,3 +1,5 @@
-## 0.0.1
+## 0.0.2
+* set jdk to 11
 
-* TODO: Describe initial release.
+## 0.0.1
+* init release

@@ -1,6 +1,6 @@
 name: flutter_deep_links
 description: Flutter plugin for accepting incoming links - App/Deep Links (Android), Universal Links and Custom URL schemes (iOS).
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/huhx/flutter_deep_links.git
 
 environment:
